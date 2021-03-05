@@ -22,6 +22,7 @@ import ToggleDarkMode from "./components/ToggleDarkMode";
 import RootContainerForDarkMode from "./components/RootContainerForDarkMode";
 import InputNewTimer from "./components/InputNewTimer";
 import OpenAvatarModal from "./components/OpenAvatarModal";
+import ClearCookies from "./components/ClearCookies";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
                 </div>
               </section>
             </CountdownProvider>
+            <ClearCookies />
           </Container>
         </ChallengesProvider>
       </RootContainerForDarkMode>

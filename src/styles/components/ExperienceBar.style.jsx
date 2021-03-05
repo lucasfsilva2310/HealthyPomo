@@ -33,7 +33,8 @@ export const CurrentExperience = styled.span`
 export const SwitchContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 8rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
 
   strong {
     margin-bottom: 1rem;
