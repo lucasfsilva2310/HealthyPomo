@@ -6,7 +6,11 @@ import ChallengeBox from "./components/ChallengeBox";
 import CountdownProvider from "./contexts/CountdownContext";
 import ChallengesProvider from "./contexts/ChallengeContext";
 import ExperienceBar from "./components/ExperienceBar";
-import { Container, RootContainer } from "./styles/components/Home.style";
+import {
+  Container,
+  FeaturesContainer,
+  RootContainer,
+} from "./styles/components/Home.style";
 import { ChallengesContext } from "./contexts/ChallengeContext";
 import "./global.css";
 import {
@@ -16,6 +20,7 @@ import {
 import DarkModeProvider, { DarkModeContext } from "./contexts/DarkModeContext";
 import ToggleDarkMode from "./components/ToggleDarkMode";
 import RootContainerForDarkMode from "./components/RootContainerForDarkMode";
+import InputNewTimer from "./components/InputNewTimer";
 
 function App() {
   return (
@@ -23,9 +28,14 @@ function App() {
       <RootContainerForDarkMode>
         <ChallengesProvider>
           <Container>
-            <ExperienceBar />
-            <ToggleDarkMode />
             <CountdownProvider>
+              <ExperienceBar />
+              <FeaturesContainer>
+                <ToggleDarkMode />
+
+                <InputNewTimer />
+              </FeaturesContainer>
+
               <section>
                 <div>
                   <Profile />

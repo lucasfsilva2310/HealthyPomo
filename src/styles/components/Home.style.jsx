@@ -26,3 +26,11 @@ export const RootContainer = styled.div`
   transition: background 0.5s;
   color: var(--text);
 `;
+
+export const FeaturesContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+`;

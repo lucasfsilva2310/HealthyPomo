@@ -28,11 +28,13 @@ export const CountdownContainer = styled.div`
   }
 
   div > span:first-child {
-    border-right: 1px solid #f0f1f3;
+    border: 1px solid #f0f1f3;
+    border-radius: 10px;
   }
 
   div > span:last-child {
-    border-left: 1px solid #f0f1f3;
+    border: 1px solid #f0f1f3;
+    border-radius: 10px;
   }
 
   span {

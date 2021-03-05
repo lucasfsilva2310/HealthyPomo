@@ -77,11 +77,11 @@ export const Switch = styled.label`
   }
 
   input:checked + span {
-    background-color: #111416;
+    background-color: #363636;
   }
 
   input:focus + span {
-    box-shadow: 0 0 1px #111416;
+    box-shadow: 0 0 1px #353434;
   }
 
   input:checked + span:before {

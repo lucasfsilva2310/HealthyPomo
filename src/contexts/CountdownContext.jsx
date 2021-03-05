@@ -12,6 +12,8 @@ const CountdownProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
+  const [value, setValue] = useState(0.1 * 60);
+
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
@@ -23,7 +25,7 @@ const CountdownProvider = ({ children }) => {
     clearTimeout(); //prestar atenção nessa linha Tentar arrumar set timeout AQUI
     setIsActive(false);
     setHasFinished(false);
-    setTimeout(() => setTime(0.1 * 60), 1000); // e AQUI, para ser instantaneo, nao demorar 1s
+    setTimeout(() => setTime(value), 1000); // e AQUI, para ser instantaneo, nao demorar 1s
   }
 
   useEffect(() => {
@@ -48,6 +50,10 @@ const CountdownProvider = ({ children }) => {
         isActive,
         startCountdown,
         resetCountdown,
+        time,
+        setTime,
+        value,
+        setValue,
       }}
     >
       {children}
