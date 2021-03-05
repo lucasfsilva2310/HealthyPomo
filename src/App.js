@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from "./components/Profile";
+import React from "react";
+import CompletedChallenges from "./components/CompletedChallenges";
+import Countdown from "./components/Countdown";
+import ChallengeBox from "./components/ChallengeBox";
+import CountdownProvider from "./contexts/CountdownContext";
+import ChallengesProvider from "./contexts/ChallengeContext";
+import ExperienceBar from "./components/ExperienceBar";
+import { Container } from "./styles/components/Home.style";
+import { ChallengesContext } from "./contexts/ChallengeContext";
+import "./global.css";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChallengesProvider>
+      <Container>
+        <ExperienceBar />
+        <CountdownProvider>
+          <section>
+            <div>
+              <Profile />
+              <CompletedChallenges />
+              <Countdown />
+            </div>
+            <div>
+              <ChallengeBox />
+            </div>
+          </section>
+        </CountdownProvider>
+      </Container>
+    </ChallengesProvider>
   );
 }
 
