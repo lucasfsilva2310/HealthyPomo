@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { CompletedChallengesContainer } from "../styles/components/CompletedChallenges.style";
 
 import { ChallengesContext } from "../contexts/ChallengeContext";
-import { DarkModeContext } from "../contexts/DarkModeContext";
 
 const CompletedChallenges = () => {
   const { challengesCompleted } = useContext(ChallengesContext);

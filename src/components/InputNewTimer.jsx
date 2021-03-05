@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import { CountdownContext } from "../contexts/CountdownContext";
 import { DarkModeContext } from "../contexts/DarkModeContext";

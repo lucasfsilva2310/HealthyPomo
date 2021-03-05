@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import {
   CountdownButton,
   CountdownButtonActive,
@@ -6,7 +6,6 @@ import {
 } from "../styles/components/Countdown.style";
 
 import { CountdownContext } from "../contexts/CountdownContext";
-import { ChallengesContext } from "../contexts/ChallengeContext";
 import { DarkModeContext } from "../contexts/DarkModeContext";
 
 const Countdown = () => {

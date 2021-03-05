@@ -4,6 +4,7 @@ import challenges from "../challenges.json";
 import Cookies from "js-cookie";
 
 import LevelUpModal from "../components/LevelUpModal";
+import AvatarModal from "../components/NewAvatarModal";
 
 export const ChallengesContext = createContext({});
 
@@ -21,15 +22,30 @@ const ChallengesProvider = ({ children, ...rest }) => {
 
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
+  const [isAvatarModalOpen, setIsAvatarModalOpen] = useState(false);
+
+  const [valueName, setValueName] = useState("");
+
+  const [valueAvatar, setValueAvatar] = useState("");
+
+  const [userName, setUserName] = useState("Lucas"); //colocar cookies
+
+  const [url, setUrl] = useState("https://github.com/lucasfsilva2310.png");
+
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
     let savedLevel = Number(Cookies.get("level"));
     let savedExperience = Number(Cookies.get("currentExperience"));
     let savedChallenges = Number(Cookies.get("challengesCompleted"));
-    console.log("level: ", savedLevel);
-    console.log("experiencia: ", savedExperience);
-    console.log("desafios: ", savedChallenges);
+    let savedUserName = Number(Cookies.get("pomoUserName"));
+    let savedAvatar = Number(Cookies.get("pomoAvatar"));
+    setUserName(savedUserName ? savedUserName : "Usuário");
+    setUrl(
+      savedAvatar
+        ? savedAvatar
+        : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/1200px-User_font_awesome.svg.png"
+    );
     setLevel(savedLevel ? savedLevel : 1);
     setCurrentExperience(savedExperience ? savedExperience : 0);
     setChallengesCompleted(savedChallenges ? savedChallenges : 0);
@@ -110,10 +126,21 @@ const ChallengesProvider = ({ children, ...rest }) => {
         experienceToNextLevel,
         completeChallenge,
         closeLevelUpModal,
+        isAvatarModalOpen,
+        setIsAvatarModalOpen,
+        valueName,
+        setValueName,
+        valueAvatar,
+        setValueAvatar,
+        setUserName,
+        setUrl,
+        userName,
+        url,
       }}
     >
       {children}
       {isLevelUpModalOpen && <LevelUpModal />}
+      {isAvatarModalOpen && <AvatarModal />}
     </ChallengesContext.Provider>
   );
 };

@@ -21,6 +21,7 @@ import DarkModeProvider, { DarkModeContext } from "./contexts/DarkModeContext";
 import ToggleDarkMode from "./components/ToggleDarkMode";
 import RootContainerForDarkMode from "./components/RootContainerForDarkMode";
 import InputNewTimer from "./components/InputNewTimer";
+import OpenAvatarModal from "./components/OpenAvatarModal";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 <ToggleDarkMode />
 
                 <InputNewTimer />
+                <OpenAvatarModal />
               </FeaturesContainer>
 
               <section>

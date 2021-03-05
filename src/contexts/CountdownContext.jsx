@@ -3,8 +3,6 @@ import { ChallengesContext } from "./ChallengeContext";
 
 export const CountdownContext = createContext({});
 
-let _timer;
-
 const CountdownProvider = ({ children }) => {
   const { startNewChallenge } = useContext(ChallengesContext);
 
@@ -12,7 +10,26 @@ const CountdownProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
-  const [value, setValue] = useState(0.1 * 60);
+  const [value, setValue] = useState(time);
+
+  const timer = {
+    time: value,
+    currentTime: 0,
+    interval: null,
+    init() {
+      timer.currentTime = timer.time;
+      timer.interval = setInterval(timer.countdown, 1000);
+    },
+
+    countdown() {
+      timer.currentTime = timer.currentTime - 1;
+      setTime(time - 1);
+
+      if (timer.currentTime === 0) {
+        clearInterval(timer.interval);
+      }
+    },
+  };
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -22,7 +39,8 @@ const CountdownProvider = ({ children }) => {
   }
 
   function resetCountdown() {
-    clearTimeout(); //prestar atenção nessa linha Tentar arrumar set timeout AQUI
+    //prestar atenção nessa linha Tentar arrumar set timeout AQUI
+    clearTimeout();
     setIsActive(false);
     setHasFinished(false);
     setTimeout(() => setTime(value), 1000); // e AQUI, para ser instantaneo, nao demorar 1s

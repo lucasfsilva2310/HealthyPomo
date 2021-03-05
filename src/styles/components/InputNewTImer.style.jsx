@@ -13,6 +13,7 @@ export const Input = styled.input`
   background: ${(props) =>
     props.darkMode === true ? "black" : "var(--white)"};
   transition: background 0.5s;
+  color: ${(props) => (props.darkMode === true ? "var(--white)" : "black")};
 `;
 
 export const InputButton = styled(CountdownButton)`
