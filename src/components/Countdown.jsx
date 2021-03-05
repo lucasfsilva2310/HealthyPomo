@@ -7,6 +7,7 @@ import {
 
 import { CountdownContext } from "../contexts/CountdownContext";
 import { ChallengesContext } from "../contexts/ChallengeContext";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 
 const Countdown = () => {
   const {
@@ -18,13 +19,15 @@ const Countdown = () => {
     resetCountdown,
   } = useContext(CountdownContext);
 
+  const { isDarkModeActivated } = useContext(DarkModeContext);
+
   // padStart auxilia caso o minuto nao seja dois caracteres, se nao for, retorna '0'
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
   const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
 
   return (
     <div>
-      <CountdownContainer>
+      <CountdownContainer darkMode={isDarkModeActivated}>
         <div>
           <span>{minuteLeft}</span>
           <span>{minuteRight}</span>
@@ -36,14 +39,16 @@ const Countdown = () => {
         </div>
       </CountdownContainer>
       {hasFinished ? (
-        <CountdownButton disabled>Ciclo Encerrado</CountdownButton>
+        <CountdownButton disabled darkMode={isDarkModeActivated}>
+          Ciclo Encerrado
+        </CountdownButton>
       ) : (
         <>
           {isActive ? (
             <CountdownButtonActive
               onClick={resetCountdown}
               type="button"
-              className="countdownButtonActive"
+              darkMode={isDarkModeActivated}
             >
               Abandonar ciclo
             </CountdownButtonActive>

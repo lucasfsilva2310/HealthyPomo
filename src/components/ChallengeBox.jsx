@@ -7,11 +7,14 @@ import {
 
 import { ChallengesContext } from "../contexts/ChallengeContext";
 import { CountdownContext } from "../contexts/CountdownContext";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 
 const ChallengeBox = () => {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(
     ChallengesContext
   );
+
+  const { isDarkModeActivated } = useContext(DarkModeContext);
 
   const { resetCountdown } = useContext(CountdownContext);
 
@@ -26,7 +29,7 @@ const ChallengeBox = () => {
   }
 
   return (
-    <ChallengeBoxContainer>
+    <ChallengeBoxContainer darkMode={isDarkModeActivated}>
       {activeChallenge ? (
         <ChallengeActive>
           <header>Ganhe {activeChallenge.amount} xp </header>

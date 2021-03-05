@@ -14,7 +14,9 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  background: var(--white);
+  background: ${(props) =>
+    props.darkMode === true ? "var(--darkComponents)" : "var(--white)"};
+  transition: background 0.5s;
   width: 100%;
   max-width: 400px;
   padding: 2rem 3rem;

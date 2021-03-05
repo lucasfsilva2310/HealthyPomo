@@ -17,3 +17,12 @@ export const Container = styled.div`
     align-content: center;
   }
 `;
+
+export const RootContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background: ${(props) =>
+    props.darkMode === true ? "var(--darkRoot)" : "var(--white)"};
+  transition: background 0.5s;
+  color: var(--text);
+`;

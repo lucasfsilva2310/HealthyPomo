@@ -14,7 +14,9 @@ export const CountdownContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    background: var(--white);
+    background: ${(props) =>
+      props.darkMode === true ? "var(--darkComponents)" : "var(--white)"};
+    transition: background 0.5s;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     font-size: 8.5rem;
@@ -64,7 +66,9 @@ export const CountdownButton = styled.button`
   }
 
   &:disabled {
-    background: var(--white);
+    background: ${(props) =>
+      props.darkMode === true ? "var(--darkComponents)" : "var(--white)"};
+    transition: background 0.5s;
     color: var(--text);
     cursor: not-allowed;
   }
@@ -83,7 +87,9 @@ export const CountdownButtonActive = styled.button`
   border: 0;
   border-radius: 5px;
 
-  background: var(--white);
+  background: ${(props) =>
+    props.darkMode === true ? "var(--darkComponents)" : "var(--white)"};
+  transition: background 0.5s;
   color: var(--title);
 
   font-size: 1.25rem;

@@ -16,6 +16,8 @@
   --blue: #5965e0;
   --blue-dark: #4953b8;
   --blue-twitter: #2aa9e0;
+  --darkComponents: #0f0f0f;
+  --darkRoot: #050505;
 }
 
 /*  Essas font-sizes sao para a responsividade, é meio que um padrao de que, quando chega a uma determinada largura
@@ -30,11 +32,6 @@ diminui 1px */
   html {
     font-size: 87.5%;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--text);
 }
 
 body,

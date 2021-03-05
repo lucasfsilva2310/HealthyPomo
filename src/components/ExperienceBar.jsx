@@ -14,10 +14,6 @@ const ExperienceBar = () => {
   const percentToNextLevel =
     Math.round(currentExperience * 100) / experienceToNextLevel;
 
-  // ${percentToNextLevel}
-  // ${percentToNextLevel}
-  // {currentExperience}
-  // {experienceToNextLevel}
   return (
     <ExperienceBarContainer>
       <span>0 xp</span>

@@ -2,13 +2,16 @@ import { useContext } from "react";
 import { Container, Overlay } from "../styles/components/LevelUpModal.style";
 
 import { ChallengesContext } from "../contexts/ChallengeContext";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 
 export const LevelUpModal = () => {
   const { level, closeLevelUpModal } = useContext(ChallengesContext);
 
+  const { isDarkModeActivated } = useContext(DarkModeContext);
+
   return (
     <Overlay>
-      <Container>
+      <Container darkMode={isDarkModeActivated}>
         <header>{level}</header>
 
         <strong>Parabéns</strong>
