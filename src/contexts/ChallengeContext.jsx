@@ -27,9 +27,9 @@ const ChallengesProvider = ({ children, ...rest }) => {
     let savedLevel = Number(Cookies.get("level"));
     let savedExperience = Number(Cookies.get("currentExperience"));
     let savedChallenges = Number(Cookies.get("challengesCompleted"));
-    setLevel(savedLevel ?? 1);
-    setCurrentExperience(savedExperience ?? 0);
-    setChallengesCompleted(savedChallenges ?? 0);
+    setLevel(savedLevel ? savedLevel : 1);
+    setCurrentExperience(savedExperience ? savedExperience : 0);
+    setChallengesCompleted(savedChallenges ? savedChallenges : 0);
   }, []);
 
   // pedindo permisao para o usuario para emitir notificação
