@@ -27,6 +27,9 @@ const ChallengesProvider = ({ children, ...rest }) => {
     let savedLevel = Number(Cookies.get("level"));
     let savedExperience = Number(Cookies.get("currentExperience"));
     let savedChallenges = Number(Cookies.get("challengesCompleted"));
+    console.log("level: ", savedLevel);
+    console.log("experiencia: ", savedExperience);
+    console.log("desafios: ", savedChallenges);
     setLevel(savedLevel ? savedLevel : 1);
     setCurrentExperience(savedExperience ? savedExperience : 0);
     setChallengesCompleted(savedChallenges ? savedChallenges : 0);
