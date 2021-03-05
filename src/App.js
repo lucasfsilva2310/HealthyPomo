@@ -9,12 +9,23 @@ import ExperienceBar from "./components/ExperienceBar";
 import { Container } from "./styles/components/Home.style";
 import { ChallengesContext } from "./contexts/ChallengeContext";
 import "./global.css";
+import {
+  Switch,
+  SwitchContainer,
+} from "./styles/components/ExperienceBar.style";
 
 function App(props) {
   return (
     <ChallengesProvider>
       <Container>
         <ExperienceBar />
+        <SwitchContainer>
+          <strong>Dark Mode</strong>
+          <Switch>
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </Switch>
+        </SwitchContainer>
         <CountdownProvider>
           <section>
             <div>
