@@ -3,6 +3,8 @@ import { ChallengesContext } from "./ChallengeContext";
 
 export const CountdownContext = createContext({});
 
+let _timer;
+
 const CountdownProvider = ({ children }) => {
   const { startNewChallenge } = useContext(ChallengesContext);
 
@@ -39,17 +41,15 @@ const CountdownProvider = ({ children }) => {
   }
 
   function resetCountdown() {
-    //prestar atenção nessa linha Tentar arrumar set timeout AQUI
-    clearTimeout();
+    clearTimeout(_timer);
     setIsActive(false);
     setHasFinished(false);
-    setTimeout(() => setTime(value), 1000); // e AQUI, para ser instantaneo, nao demorar 1s
+    setTime(value);
   }
 
   useEffect(() => {
     if (isActive && time > 0) {
-      //essa variavel countdownTimeout só serve pra CANCELAR um timeout que ja tenha sido iniciado
-      setTimeout(() => {
+      _timer = setTimeout((e) => {
         setTime(time - 1);
       }, 1000);
     } else if (isActive && time === 0) {
