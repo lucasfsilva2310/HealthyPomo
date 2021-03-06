@@ -36,19 +36,25 @@ export const AvatarModal = () => {
   }
 
   function update() {
+    let wasAvatarChanged = false;
+    let wasNameChanged = false;
     if (valueAvatar.length > 0) {
       setUrl(valueAvatar);
       Cookies.set("pomoAvatar", String(url));
-      return;
+      wasAvatarChanged = true;
     }
-    setUrl(url);
+    if (!wasAvatarChanged) {
+      setUrl(url);
+    }
 
     if (valueName.length > 0) {
       setUserName(valueName);
       Cookies.set("pomoUserName", String(userName));
-      return;
+      wasNameChanged = true;
     }
-    setUserName(userName);
+    if (!wasNameChanged) {
+      setUserName(userName);
+    }
   }
   return (
     <Overlay>
