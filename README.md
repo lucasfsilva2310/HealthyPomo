@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Healthy Pomo ![tomato](https://img.icons8.com/emoji/48/000000/tomato-emoji.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Healthy Pomo Image](https://i.postimg.cc/fbqK6mnP/Healthy-Pomo.png)
 
-## Available Scripts
+Healthy Pomo is a simple App based of Pomodoro technique, which consists in better management of your time.
 
-In the project directory, you can run:
+You have the possibility to choose for how long you´ll be concentrated, you can customize your own profile, and it has a dark mode too!
 
-### `yarn start`
+It also tracks your completed challenges ( at the end of every timer, you´ll have a sort of relaxing challenge, if you complete it, you´ll gain some experience and could level up! Isn´t that awesome??).
+![Pomodoro Challenge](https://i.postimg.cc/d3rgs4J3/Pomo-Challenge.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For this App I´m using the following Libraries/Frameworks
 
-### `yarn test`
+1.  [Styled Components](https://styled-components.com/)
+    : A simple library to help build custom react components just like a HTML tag
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+         `yarn add styled-components` || `npm install styled-components`
 
-### `yarn build`
+2.  [Js-cookie](https://www.npmjs.com/package/js-cookie)
+    : A basic Javascripts API for handling cookies in any way
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+         `yarn add js-cookie` || `npm install js-cookie`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.[React](https://reactjs.org/)
+: A Javascript library for building user interfaces.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        `npx create-react-app`
 
-### `yarn eject`
+4.  [Context API](https://reactjs.org/docs/context.html#gatsby-focus-wrapper)
+    : A way for handling states inside React in a simpler way.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+         `import { createContext, useContext } from "react"`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Myself :)](https://github.com/lucasfsilva2310)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Acknowledmentes
 
-## Learn More
+This technique was helping a lot along the way for becoming a great developer, so I thought I customize one to make it better for me or anyone who is using this technique too!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See you in the next repo! ![Thumbs up](https://img.icons8.com/cute-clipart/64/000000/facebook-like.png)
