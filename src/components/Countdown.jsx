@@ -39,7 +39,7 @@ const Countdown = () => {
       </CountdownContainer>
       {hasFinished ? (
         <CountdownButton disabled darkMode={isDarkModeActivated}>
-          Ciclo Encerrado
+          Cycle finished
         </CountdownButton>
       ) : (
         <>
@@ -49,11 +49,11 @@ const Countdown = () => {
               type="button"
               darkMode={isDarkModeActivated}
             >
-              Abandonar ciclo
+              End cycle
             </CountdownButtonActive>
           ) : (
             <CountdownButton onClick={startCountdown} type="button">
-              Iniciar um ciclo
+              Start new cycle
             </CountdownButton>
           )}
         </>

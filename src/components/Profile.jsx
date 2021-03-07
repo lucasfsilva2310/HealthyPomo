@@ -8,7 +8,7 @@ const Profile = () => {
 
   return (
     <ProfileContainer>
-      <img src={url} alt="Lucas Silva" />
+      <img src={url} alt={userName} />
       <div>
         <strong>{userName}</strong>
         <p>

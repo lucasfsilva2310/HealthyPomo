@@ -15,7 +15,7 @@ export const LevelUpModal = () => {
         <header>{level}</header>
 
         <strong>Parabéns</strong>
-        <p>Você alcançou um novo level!</p>
+        <p>You´ve reached a new level!</p>
 
         <button type="button" onClick={closeLevelUpModal}>
           <img src="/icons/close.svg" alt="Fechar Modal" />

@@ -24,15 +24,15 @@ const InputNewTimer = () => {
 
   return (
     <InputContainer>
-      <strong>Mudar Temporizador</strong>
+      <strong>Change timer</strong>
       <Input
         onChange={handleInput}
         type="number"
         darkMode={isDarkModeActivated}
-        placeholder="Em minutos"
+        placeholder="In minutes"
       ></Input>
       <InputButton type="button" onClick={() => changeTimer(value)}>
-        Atualizar
+        Update
       </InputButton>
     </InputContainer>
   );

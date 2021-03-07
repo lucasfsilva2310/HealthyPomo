@@ -16,7 +16,7 @@ const OpenAvatarModal = () => {
         type="button"
         onClick={openModal}
       >
-        Mudar Avatar
+        Change Avatar
       </CountdownButton>
     </>
   );

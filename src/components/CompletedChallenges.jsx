@@ -8,7 +8,7 @@ const CompletedChallenges = () => {
 
   return (
     <CompletedChallengesContainer>
-      <span>Desafios Completos</span>
+      <span>Challenges completed</span>
       <span>{challengesCompleted}</span>
     </CompletedChallengesContainer>
   );

@@ -13,6 +13,9 @@ export const AvatarContainer = styled(Container)`
     height: 2rem;
     width: 15rem;
   }
+  strong {
+    font-size: 1.3rem;
+  }
 
   a {
     background: var(--blue);

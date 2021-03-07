@@ -23,7 +23,7 @@ const ClearCookies = () => {
           onClick={clearAll}
           style={{ width: "11rem", background: "var(--red)" }}
         >
-          Limpar Histórico
+          Clear cookies
         </CountdownButton>
       </ClearCookiesContainer>
     </>

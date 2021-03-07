@@ -32,14 +32,14 @@ const ChallengeBox = () => {
     <ChallengeBoxContainer darkMode={isDarkModeActivated}>
       {activeChallenge ? (
         <ChallengeActive>
-          <header>Ganhe {activeChallenge.amount} xp </header>
+          <header>Gain {activeChallenge.amount} xp </header>
 
           <main>
             <img
               src={`icons/${activeChallenge.type}.svg`}
               alt="Challenge active"
             />
-            <strong>Novo desafio</strong>
+            <strong>New Challenge!</strong>
             <p>{activeChallenge.description}</p>
           </main>
 
@@ -49,23 +49,23 @@ const ChallengeBox = () => {
               className="challengeFailedButton"
               onClick={handleChallengeFailed}
             >
-              Falhei
+              Failed
             </button>
             <button
               type="button"
               className="challengeSucceededButton"
               onClick={handleChallengeSucceeded}
             >
-              Completei
+              Completed
             </button>
           </footer>
         </ChallengeActive>
       ) : (
         <ChallengeNotActive>
-          <strong>Finalize um ciclo para receber um desafio</strong>
+          <strong>Finish a cycle to receive a new challenge</strong>
           <p>
             <img src="icons/level-up.svg" alt="Level Up" />
-            Avance de level completando desafios
+            Level up by completing challenges
           </p>
         </ChallengeNotActive>
       )}

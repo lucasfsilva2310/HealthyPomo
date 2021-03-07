@@ -60,25 +60,25 @@ export const AvatarModal = () => {
     <Overlay>
       <AvatarContainer darkMode={isDarkModeActivated}>
         <div>
-          <strong>Mude seu Nome:</strong>
+          <strong>Change you name:</strong>
           <Input
             type="text"
-            placeholder="Nome / Apelido"
+            placeholder="Name / Nickname"
             darkMode={isDarkModeActivated}
             onChange={handleInputName}
           ></Input>
         </div>
         <div>
-          <strong>Mude seu Avatar</strong>
+          <strong>Change your avatar</strong>
           <Input
             type="text"
-            placeholder="URL da imagem"
+            placeholder="( URL image only) "
             darkMode={isDarkModeActivated}
             onChange={handleInputAvatar}
           ></Input>
         </div>
         <a href="#" onClick={() => update()}>
-          Atualizar
+          Update
         </a>
         <button type="button" onClick={closeModal}>
           <img src="/icons/close.svg" alt="Fechar Modal" />

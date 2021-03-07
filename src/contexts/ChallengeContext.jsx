@@ -28,7 +28,7 @@ const ChallengesProvider = ({ children, ...rest }) => {
 
   const [valueAvatar, setValueAvatar] = useState("");
 
-  const [userName, setUserName] = useState("Lucas"); //colocar cookies
+  const [userName, setUserName] = useState("User"); //colocar cookies
 
   const [url, setUrl] = useState("https://github.com/lucasfsilva2310.png");
 
@@ -40,7 +40,7 @@ const ChallengesProvider = ({ children, ...rest }) => {
     let savedChallenges = Number(Cookies.get("challengesCompleted"));
     let savedUserName = Number(Cookies.get("pomoUserName"));
     let savedAvatar = Number(Cookies.get("pomoAvatar"));
-    setUserName(savedUserName ? savedUserName : "Usuário");
+    setUserName(savedUserName ? savedUserName : "User");
     setUrl(
       savedAvatar
         ? savedAvatar
@@ -84,8 +84,8 @@ const ChallengesProvider = ({ children, ...rest }) => {
     new Audio("/notification.mp3").play();
 
     if (Notification.permission === "granted") {
-      new Notification("Novo desafio! :) ", {
-        body: `Valendo ${challenge.amount} xp. Boora!`,
+      new Notification("New Challenge! :) ", {
+        body: `Valendo ${challenge.amount} xp. Let´s Goo!`,
       });
     }
   }
